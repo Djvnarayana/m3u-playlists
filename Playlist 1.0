@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VLC Playlist</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+ 
+        #vlc {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="vlc"></div>
+<script type="text/javascript" src="http://download.videolan.org/pub/videolan/vlc/last/win32/plugins/lua/intf/embedded_files/webplugin/vlc.min.js"></script>
+<script type="text/javascript">
+    var options = [
+        '--no-audio',
+        '--playlist-autostart',
+        '--no-video-title-show',
+        '--quiet',
+        '--no-video-deco',
+        '--no-embedded-video',
+        '--no-snapshot-preview'
+    ];
+    var playlist = 'https://raw.githubusercontent.com/Djvnarayana/m3u-playlists/main/paper-1%20Accounts.m3u';
+    var vlc = document.getElementById("vlc");
+    vlc.playlist.clear();
+    vlc.playlist.add(playlist, null, options);
+    vlc.playlist.play();
+</script>
+</body>
+</html>
