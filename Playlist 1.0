@@ -29,7 +29,7 @@
         '--no-embedded-video',
         '--no-snapshot-preview'
     ];
-    var playlist = 'https://raw.githubusercontent.com/Djvnarayana/m3u-playlists/main/paper-1%20Accounts.m3u';
+    var playlist = 'https://raw.githubusercontent.com/Djvnarayana/m3u-playlists/main/paper-1%20Accounts.m3u8';
     var vlc = document.getElementById("vlc");
     vlc.playlist.clear();
     vlc.playlist.add(playlist, null, options);
